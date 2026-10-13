@@ -1,0 +1,2717 @@
+{
+  "format": "blockpar",
+  "header_key": 2984822409,
+  "new_format": true,
+  "seed": 1369621460,
+  "sha256": "a7a65f751a95c085bab7266675e450e6fceb1f6a5bd2dd8ccebdf948174be0e0",
+  "tree": {
+    "sorted": true,
+    "entries": [
+      {
+        "name": "ML",
+        "block": {
+          "sorted": true,
+          "entries": [
+            {
+              "name": "FHDGalaxySearchWindow",
+              "block": {
+                "sorted": true,
+                "entries": [
+                  {
+                    "name": "Border",
+                    "value": "0,0,1024,768",
+                    "metadata": [
+                      0,
+                      1
+                    ]
+                  },
+                  {
+                    "name": "CodeBeforeRun",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "00",
+                          "value": "int w=GetGameOptions('ResolutionX');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "01",
+                          "value": "int h=GetGameOptions('ResolutionY');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "02",
+                          "value": "CustomInterfaceSize('MainPanel',w,h);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "03",
+                          "value": "CustomInterfaceSize('BGBuf',w,h);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "04",
+                          "value": "CustomInterfacePos('FrameWindow',(w-721)/2,(h-669)/2);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "05",
+                          "value": "CustomInterfaceSize('FrameWindow',721,669);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "06",
+                          "value": "CustomInterfacePos('Window',(w-660)/2,(h-590)/2);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "07",
+                          "value": "CustomInterfaceText('SearchQuery','');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "08",
+                          "value": "CustomInterfaceText('LastQuery','');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "09",
+                          "value": "CustomInterfaceText('PageIndex','0');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "10",
+                          "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix','','hasExpectedPrefix',0);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "11",
+                          "value": "SetFocus('','SearchQuery');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "metadata": [
+                      0,
+                      1
+                    ]
+                  },
+                  {
+                    "name": "Panel",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "GraphBuf",
+                          "block": {
+                            "sorted": true,
+                            "entries": [
+                              {
+                                "name": "Name",
+                                "value": "BGBuf",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "Pos",
+                                "value": "0,0,9",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "Size",
+                                "value": "1024,768",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "Name",
+                          "value": "MainPanel",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "OnKey",
+                          "block": {
+                            "sorted": true,
+                            "entries": [
+                              {
+                                "name": "00",
+                                "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.RefreshOnKey'),'pressedKey',KEY,'keyModifiers',KEYMOD);",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "Panel",
+                          "block": {
+                            "sorted": true,
+                            "entries": [
+                              {
+                                "name": "Image",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "Image",
+                                      "value": "GI,Bm.FHDGalaxySearch.Rama",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "FrameRama",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "0,0,0",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "721,669",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "Name",
+                                "value": "FrameWindow",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "Pos",
+                                "value": "0,0,0",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "Size",
+                                "value": "721,669",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "metadata": [
+                            0,
+                            2
+                          ]
+                        },
+                        {
+                          "name": "Panel",
+                          "block": {
+                            "sorted": true,
+                            "entries": [
+                              {
+                                "name": "Edit",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "MaxLen",
+                                      "value": "40",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "SearchQuery",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "124,70,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "ReturnFocusLeave",
+                                      "value": "False",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "338,30",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "230,240,245",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "Frame",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "Color",
+                                      "value": "70,130,150",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "ColorFill",
+                                      "value": "15,26,38",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Fill",
+                                      "value": "True",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Rect",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Backdrop",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "0,0,3",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "660,590",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "ClearQuery"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FHDGalaxySearch.ClearInputN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FHDGalaxySearch.ClearInputA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FHDGalaxySearch.ClearInputD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "488,70,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "150,40"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "CustomInterfaceText('SearchQuery','');",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          },
+                                          {
+                                            "name": "01",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix','','hasExpectedPrefix',0);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          },
+                                          {
+                                            "name": "02",
+                                            "value": "SetFocus('','SearchQuery');",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  0,
+                                  12
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Pick0"
+                                    },
+                                    {
+                                      "name": "Active",
+                                      "value": "False"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "573,141,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',0);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  1,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Pick1"
+                                    },
+                                    {
+                                      "name": "Active",
+                                      "value": "False"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "573,187,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',1);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  2,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Pick2"
+                                    },
+                                    {
+                                      "name": "Active",
+                                      "value": "False"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "573,233,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',2);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  3,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Pick3"
+                                    },
+                                    {
+                                      "name": "Active",
+                                      "value": "False"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "573,279,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',3);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  4,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Pick4"
+                                    },
+                                    {
+                                      "name": "Active",
+                                      "value": "False"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "573,325,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',4);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  5,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Pick5"
+                                    },
+                                    {
+                                      "name": "Active",
+                                      "value": "False"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "573,371,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',5);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  6,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Pick6"
+                                    },
+                                    {
+                                      "name": "Active",
+                                      "value": "False"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "573,417,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',6);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  7,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Pick7"
+                                    },
+                                    {
+                                      "name": "Active",
+                                      "value": "False"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "573,463,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',7);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  8,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Prev"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldLeftN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldLeftA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldLeftD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "285,517,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Page'),'delta',-1);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  9,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Next"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormShip2.2HoldRightN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormShip2.2HoldRightA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormShip2.2HoldRightD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "318,517,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "22,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Page'),'delta',1);",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  10,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "Close"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FormCount2.2CloseN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FormCount2.2CloseA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FormCount2.2CloseD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "575,520,-2"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "36,37"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "CloseCustomForm();",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  11,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Ranger",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Title",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "24,10,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "610,40",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "ПОИСК ЗВЁЗДНЫХ СИСТЕМ",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "230,240,245",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  0,
+                                  15
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2SmallBold",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "SearchCaption",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "24,73,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "95,25",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "Название:",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "230,240,245",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  1,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Small",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "ClearQueryText",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "508,113,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "130,22",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "Стереть ввод",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "180,200,230",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  2,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2SmallBold",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "ResultCount",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "25,111,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "475,24",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "Начните вводить название системы",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "220,240,255",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  3,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "Active",
+                                      "value": "False",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "LastQuery",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "-100,-100,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "1,1",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  4,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "Active",
+                                      "value": "False",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "PageIndex",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "-100,-100,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "1,1",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "0",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  5,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Result0",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,141,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "520,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "226,239,252",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  6,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Result1",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,187,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "520,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "226,239,252",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  7,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Result2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,233,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "520,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "226,239,252",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  8,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Result3",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,279,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "520,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "226,239,252",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  9,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Result4",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,325,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "520,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "226,239,252",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  10,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Result5",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,371,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "520,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "226,239,252",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  11,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Result6",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,417,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "520,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "226,239,252",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  12,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "AlignX",
+                                      "value": "Left",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "AlignY",
+                                      "value": "CenterEx",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2Normal",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "Result7",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,463,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "520,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "226,239,252",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  13,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Label",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "Font",
+                                      "value": "Font.2SmallBold",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Name",
+                                      "value": "PageInfo",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "30,516,-2",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "260,35",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "Text",
+                                      "value": "",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    },
+                                    {
+                                      "name": "TextColor",
+                                      "value": "220,240,255",
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  14,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Name",
+                                "value": "Window",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "Pos",
+                                "value": "0,0,0",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              },
+                              {
+                                "name": "Size",
+                                "value": "660,590",
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "metadata": [
+                            1,
+                            0
+                          ]
+                        },
+                        {
+                          "name": "Pos",
+                          "value": "0,0,0",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "Size",
+                          "value": "1024,768",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    },
+                    "metadata": [
+                      0,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "metadata": [
+                0,
+                1
+              ]
+            },
+            {
+              "name": "Galaxy",
+              "block": {
+                "sorted": true,
+                "entries": [
+                  {
+                    "name": "Panel",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "Panel",
+                          "block": {
+                            "sorted": true,
+                            "entries": []
+                          },
+                          "metadata": [
+                            0,
+                            2
+                          ]
+                        },
+                        {
+                          "name": "Panel",
+                          "block": {
+                            "sorted": true,
+                            "entries": [
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": []
+                                },
+                                "metadata": [
+                                  0,
+                                  8
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": []
+                                },
+                                "metadata": [
+                                  1,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": []
+                                },
+                                "metadata": [
+                                  2,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": []
+                                },
+                                "metadata": [
+                                  3,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": []
+                                },
+                                "metadata": [
+                                  4,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": []
+                                },
+                                "metadata": [
+                                  5,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "FHDGalaxySearchOpen"
+                                    },
+                                    {
+                                      "name": "Help",
+                                      "value": "Help.FHDGalaxySearchOpen"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FHDGalaxySearch.MapSearchN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FHDGalaxySearch.MapSearchA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FHDGalaxySearch.MapSearchD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "MouseBlocking",
+                                      "value": "True"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "466,577,-10"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "23,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "OpenCustomForm('FHDGalaxySearchWindow');",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  6,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "GraphButton",
+                                "block": {
+                                  "sorted": false,
+                                  "entries": [
+                                    {
+                                      "name": "Name",
+                                      "value": "FHDGalaxySearchClearMap"
+                                    },
+                                    {
+                                      "name": "ImageNormal",
+                                      "value": "GI,Bm.FHDGalaxySearch.MapClearN"
+                                    },
+                                    {
+                                      "name": "ImageNormalA",
+                                      "value": "GI,Bm.FHDGalaxySearch.MapClearA"
+                                    },
+                                    {
+                                      "name": "ImageDown",
+                                      "value": "GI,Bm.FHDGalaxySearch.MapClearD"
+                                    },
+                                    {
+                                      "name": "Kind",
+                                      "value": "Normal"
+                                    },
+                                    {
+                                      "name": "KindHit",
+                                      "value": "Rect"
+                                    },
+                                    {
+                                      "name": "MouseBlocking",
+                                      "value": "True"
+                                    },
+                                    {
+                                      "name": "Pos",
+                                      "value": "491,577,-10"
+                                    },
+                                    {
+                                      "name": "Size",
+                                      "value": "23,35"
+                                    },
+                                    {
+                                      "name": "Style",
+                                      "value": "Style.GB.SoundNormal"
+                                    },
+                                    {
+                                      "name": "OnPressCode",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "00",
+                                            "value": "if(InterfaceState('Galaxy','FHDGalaxySearchMark')==1)",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          },
+                                          {
+                                            "name": "01",
+                                            "value": "{",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          },
+                                          {
+                                            "name": "02",
+                                            "value": "if(MessageBoxYesNo('Удалить метку с карты?'))ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.ClearMark'));",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          },
+                                          {
+                                            "name": "03",
+                                            "value": "}",
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  7,
+                                  0
+                                ]
+                              },
+                              {
+                                "name": "Panel",
+                                "block": {
+                                  "sorted": true,
+                                  "entries": [
+                                    {
+                                      "name": "FHDGalaxySearchOverlay",
+                                      "block": {
+                                        "sorted": true,
+                                        "entries": [
+                                          {
+                                            "name": "Image",
+                                            "block": {
+                                              "sorted": true,
+                                              "entries": [
+                                                {
+                                                  "name": "Active",
+                                                  "value": "False",
+                                                  "metadata": [
+                                                    0,
+                                                    1
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Image",
+                                                  "value": "GAI,Bm.FHDGalaxySearch.GNPoQ",
+                                                  "metadata": [
+                                                    0,
+                                                    1
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "MouseBlocking",
+                                                  "value": "False",
+                                                  "metadata": [
+                                                    0,
+                                                    1
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "MouseBlockingTest",
+                                                  "value": "False",
+                                                  "metadata": [
+                                                    0,
+                                                    1
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Name",
+                                                  "value": "FHDGalaxySearchMark",
+                                                  "metadata": [
+                                                    0,
+                                                    1
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Pos",
+                                                  "value": "0,0,-10",
+                                                  "metadata": [
+                                                    0,
+                                                    1
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Size",
+                                                  "value": "50,50",
+                                                  "metadata": [
+                                                    0,
+                                                    1
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            "metadata": [
+                                              0,
+                                              1
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "metadata": [
+                                        0,
+                                        1
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "metadata": [
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          },
+                          "metadata": [
+                            1,
+                            0
+                          ]
+                        }
+                      ]
+                    },
+                    "metadata": [
+                      0,
+                      1
+                    ]
+                  }
+                ]
+              },
+              "metadata": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "metadata": [
+          0,
+          1
+        ]
+      }
+    ]
+  }
+}

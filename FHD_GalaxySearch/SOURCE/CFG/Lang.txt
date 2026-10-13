@@ -1,0 +1,106 @@
+Help ^{
+    FHDGalaxySearchOpen=Поиск систем на галактической карте
+}
+Script ^{
+    FHDGalaxySearch ^{
+        Refresh ~{
+            00=str query=lowercase(trim(CustomInterfaceText('SearchQuery')));
+            01=if(hasExpectedPrefix)query=expectedPrefix;
+            02=str previous=CustomInterfaceText('LastQuery');
+            03=if(query!=previous){CustomInterfaceText('LastQuery',query);CustomInterfaceText('PageIndex','0');}
+            04=int page=0+CustomInterfaceText('PageIndex');
+            05=if(page<0)page=0;
+            06=for(int j=0;j<8;j=j+1){CustomInterfaceText('Result'+j,'');CustomInterfaceState('Pick'+j,0);}
+            07=CustomInterfaceState('Prev',2);
+            08=CustomInterfaceState('Next',2);
+            09=if(count(query)==0){CustomInterfaceText('ResultCount','Начните вводить название системы');CustomInterfaceText('PageInfo','');exit;}
+            10=int total=0;
+            11=int skip=page*8;
+            12=int length=count(query);
+            13=for(int i=0;i<GalaxyStars();i=i+1)
+            14={
+            15=dword star=GalaxyStar(i);
+            16=if(!star)continue;
+            17=str name=StarName(star);
+            18=if(substr(lowercase(name),0,length)!=query)continue;
+            19=if(total>=skip && total<skip+8)
+            20={
+            21=int resultIndex=total-skip;
+            22=CustomInterfaceText('Result'+resultIndex,name);
+            23=CustomInterfaceState('Pick'+resultIndex,1);
+            24=}
+            25=total=total+1;
+            26=}
+            27=CustomInterfaceText('ResultCount','Найдено систем: '+total);
+            28=if(total==0){CustomInterfaceText('PageInfo','Нет совпадений');exit;}
+            29=CustomInterfaceText('PageInfo','Страница '+(page+1)+'  ·  '+(skip+1)+'-'+min(total,skip+8)+' из '+total);
+            30=if(page>0)CustomInterfaceState('Prev',3);
+            31=if(total>skip+8)CustomInterfaceState('Next',3);
+        }
+        RefreshOnKey ~{
+            00=str current=lowercase(trim(CustomInterfaceText('SearchQuery')));
+            01=str expected=current;
+            02=if(keyModifiers>=2){ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix','','hasExpectedPrefix',0);exit;}
+            03=int n=count(current);
+            04=if(pressedKey==8){if(n>0)expected=substr(current,0,n-1);}
+            05=if(pressedKey>=65 && pressedKey<=90)
+            06={
+            07=str letters='фисвуапршолдьтщзйкыегмцчня';
+            08=if(n>0 && findsubstr('abcdefghijklmnopqrstuvwxyz',substr(current,0,1))>=0)letters='abcdefghijklmnopqrstuvwxyz';
+            09=expected=current+substr(letters,pressedKey-65,1);
+            10=}
+            11=if(pressedKey==219)expected=current+'х';
+            12=if(pressedKey==221)expected=current+'ъ';
+            13=if(pressedKey==186)expected=current+'ж';
+            14=if(pressedKey==222)expected=current+'э';
+            15=if(pressedKey==188)expected=current+'б';
+            16=if(pressedKey==190)expected=current+'ю';
+            17=if(pressedKey==192)expected=current+'ё';
+            18=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix',expected,'hasExpectedPrefix',1);
+        }
+        Page ~{
+            00=int page=0+CustomInterfaceText('PageIndex');
+            01=if(delta<0 && page<=0)exit;
+            02=if(delta>0 && CustomInterfaceState('Next')==2)exit;
+            03=CustomInterfaceText('PageIndex',''+(page+delta));
+            04=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix','','hasExpectedPrefix',0);
+        }
+        Select ~{
+            00=str query=lowercase(trim(CustomInterfaceText('SearchQuery')));
+            01=if(count(query)==0)exit;
+            02=int desired=(0+CustomInterfaceText('PageIndex'))*8+row;
+            03=int seen=0;
+            04=dword chosen=0;
+            05=int length=count(query);
+            06=for(int i=0;i<GalaxyStars();i=i+1)
+            07={
+            08=dword star=GalaxyStar(i);
+            09=if(!star)continue;
+            10=if(substr(lowercase(StarName(star)),0,length)!=query)continue;
+            11=if(seen==desired){chosen=star;break;}
+            12=seen=seen+1;
+            13=}
+            14=if(!chosen)exit;
+            15=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Place'),'star',chosen);
+            16=CloseCustomForm();
+        }
+        Place ~{
+            00=if(!star)exit;
+            01=float galaxyWidth=CT('Constellations.GalaxySizeX');
+            02=float galaxyHeight=CT('Constellations.GalaxySizeY');
+            03=if(galaxyWidth<=0 || galaxyHeight<=0)exit;
+            04=float x=CoordX(star);
+            05=x=x/galaxyWidth;
+            06=x=round(x*1151);
+            07=float y=CoordY(star);
+            08=y=y/galaxyHeight;
+            09=y=round(y*787);
+            10=InterfacePos('Galaxy','FHDGalaxySearchMark',-25+x,-25+y,0);
+            11=InterfaceState('Galaxy','FHDGalaxySearchMark',1);
+        }
+        ClearMark ~{
+            00=InterfaceState('Galaxy','FHDGalaxySearchMark',-1);
+            01=InterfacePos('Galaxy','FHDGalaxySearchMark',0,0,0);
+        }
+    }
+}

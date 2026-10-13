@@ -1,0 +1,14 @@
+Name=FHD_GalaxySearch
+Section=FHD_MODS
+Author=Prolog_D
+Dependence=
+Conflict=AMod_MapMarker
+Priority=1
+Languages=Rus
+SmallDescription=Удобный поиск систем
+FullDescription=Поисковик позволяет сразу видеть имеющиеся системы по напечатанным первым буквам: чем больше букв, тем точнее результат!
+SmallDescription=------------------------------------  <color=0,200,255>ENG</color>  ----------------------------------------
+FullDescription= ------------------------------------  <color=0,200,255>ENG</color>  ----------------------------------------
+Languages=Eng
+SmallDescription=Convenient system search
+FullDescription=The search engine instantly displays available systems as you type—the more letters you enter, the more accurate the search!

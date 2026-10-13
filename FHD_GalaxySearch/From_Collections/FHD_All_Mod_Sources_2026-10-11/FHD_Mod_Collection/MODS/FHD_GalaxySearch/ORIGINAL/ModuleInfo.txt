@@ -1,0 +1,9 @@
+Name=FHD_GalaxySearch
+Section=FHD_MODS
+Author=Prolog_D
+Dependence=
+Conflict=
+Priority=1
+Languages=Rus
+SmallDescription=          .
+FullDescription=     .     :      .      .         QuestMarker.

@@ -1,0 +1,14 @@
+Name=FHD_GalaxySearch
+Section=FHD_MODS
+Author=Prolog_D
+Dependence=AModGalaxyLite
+Conflict=AMod_MapMarker
+Priority=1
+Languages=Rus
+SmallDescription=[AModGalaxyLite AGL5] Удобный поиск систем
+FullDescription=[AModGalaxyLite AGL5] Поисковик позволяет сразу видеть имеющиеся системы по напечатанным первым буквам: чем больше букв, тем точнее результат!
+SmallDescription=------------------------------------  <color=0,200,255>ENG</color>  ----------------------------------------
+FullDescription=[AModGalaxyLite AGL5]  ------------------------------------  <color=0,200,255>ENG</color>  ----------------------------------------
+Languages=Eng
+SmallDescription=[AModGalaxyLite AGL5] Convenient system search
+FullDescription=[AModGalaxyLite AGL5] The search engine instantly displays available systems as you type—the more letters you enter, the more accurate the search!

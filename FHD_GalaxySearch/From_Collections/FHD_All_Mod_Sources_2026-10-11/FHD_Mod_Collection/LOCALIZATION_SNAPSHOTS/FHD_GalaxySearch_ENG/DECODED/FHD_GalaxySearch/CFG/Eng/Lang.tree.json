@@ -1,0 +1,776 @@
+{
+  "format": "blockpar",
+  "header_key": 2984822409,
+  "new_format": true,
+  "seed": 1369621460,
+  "sha256": "a96597b32d1918cfe026cb6c552769111389a7d3eac5d671d5100f57348d57bc",
+  "tree": {
+    "sorted": true,
+    "entries": [
+      {
+        "name": "Help",
+        "block": {
+          "sorted": true,
+          "entries": [
+            {
+              "name": "FHDGalaxySearchOpen",
+              "value": "Search star systems on the galaxy map",
+              "metadata": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "metadata": [
+          0,
+          1
+        ]
+      },
+      {
+        "name": "Script",
+        "block": {
+          "sorted": true,
+          "entries": [
+            {
+              "name": "FHDGalaxySearch",
+              "block": {
+                "sorted": false,
+                "entries": [
+                  {
+                    "name": "Refresh",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "00",
+                          "value": "str query=lowercase(trim(CustomInterfaceText('SearchQuery')));",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "01",
+                          "value": "if(hasExpectedPrefix)query=expectedPrefix;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "02",
+                          "value": "str previous=CustomInterfaceText('LastQuery');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "03",
+                          "value": "if(query!=previous){CustomInterfaceText('LastQuery',query);CustomInterfaceText('PageIndex','0');}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "04",
+                          "value": "int page=0+CustomInterfaceText('PageIndex');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "05",
+                          "value": "if(page<0)page=0;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "06",
+                          "value": "for(int j=0;j<8;j=j+1){CustomInterfaceText('Result'+j,'');CustomInterfaceState('Pick'+j,0);}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "07",
+                          "value": "CustomInterfaceState('Prev',2);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "08",
+                          "value": "CustomInterfaceState('Next',2);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "09",
+                          "value": "if(count(query)==0){CustomInterfaceText('ResultCount','Start typing a system name');CustomInterfaceText('PageInfo','');exit;}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "10",
+                          "value": "int total=0;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "11",
+                          "value": "int skip=page*8;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "12",
+                          "value": "int length=count(query);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "13",
+                          "value": "for(int i=0;i<GalaxyStars();i=i+1)",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "14",
+                          "value": "{",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "15",
+                          "value": "dword star=GalaxyStar(i);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "16",
+                          "value": "if(!star)continue;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "17",
+                          "value": "str name=StarName(star);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "18",
+                          "value": "if(substr(lowercase(name),0,length)!=query)continue;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "19",
+                          "value": "if(total>=skip && total<skip+8)",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "20",
+                          "value": "{",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "21",
+                          "value": "int resultIndex=total-skip;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "22",
+                          "value": "CustomInterfaceText('Result'+resultIndex,name);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "23",
+                          "value": "CustomInterfaceState('Pick'+resultIndex,1);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "24",
+                          "value": "}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "25",
+                          "value": "total=total+1;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "26",
+                          "value": "}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "27",
+                          "value": "CustomInterfaceText('ResultCount','Systems found: '+total);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "28",
+                          "value": "if(total==0){CustomInterfaceText('PageInfo','No matches');exit;}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "29",
+                          "value": "CustomInterfaceText('PageInfo','Page '+(page+1)+'  ·  '+(skip+1)+'-'+min(total,skip+8)+' of '+total);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "30",
+                          "value": "if(page>0)CustomInterfaceState('Prev',3);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "31",
+                          "value": "if(total>skip+8)CustomInterfaceState('Next',3);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "RefreshOnKey",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "00",
+                          "value": "str current=lowercase(trim(CustomInterfaceText('SearchQuery')));",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "01",
+                          "value": "str expected=current;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "02",
+                          "value": "if(keyModifiers>=2){ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix','','hasExpectedPrefix',0);exit;}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "03",
+                          "value": "int n=count(current);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "04",
+                          "value": "if(pressedKey==8){if(n>0)expected=substr(current,0,n-1);}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "05",
+                          "value": "if(pressedKey>=65 && pressedKey<=90)",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "06",
+                          "value": "{",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "07",
+                          "value": "str letters='фисвуапршолдьтщзйкыегмцчня';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "08",
+                          "value": "if(n>0 && findsubstr('abcdefghijklmnopqrstuvwxyz',substr(current,0,1))>=0)letters='abcdefghijklmnopqrstuvwxyz';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "09",
+                          "value": "expected=current+substr(letters,pressedKey-65,1);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "10",
+                          "value": "}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "11",
+                          "value": "if(pressedKey==219)expected=current+'х';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "12",
+                          "value": "if(pressedKey==221)expected=current+'ъ';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "13",
+                          "value": "if(pressedKey==186)expected=current+'ж';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "14",
+                          "value": "if(pressedKey==222)expected=current+'э';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "15",
+                          "value": "if(pressedKey==188)expected=current+'б';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "16",
+                          "value": "if(pressedKey==190)expected=current+'ю';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "17",
+                          "value": "if(pressedKey==192)expected=current+'ё';",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "18",
+                          "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix',expected,'hasExpectedPrefix',1);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Page",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "00",
+                          "value": "int page=0+CustomInterfaceText('PageIndex');",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "01",
+                          "value": "if(delta<0 && page<=0)exit;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "02",
+                          "value": "if(delta>0 && CustomInterfaceState('Next')==2)exit;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "03",
+                          "value": "CustomInterfaceText('PageIndex',''+(page+delta));",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "04",
+                          "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix','','hasExpectedPrefix',0);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Select",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "00",
+                          "value": "str query=lowercase(trim(CustomInterfaceText('SearchQuery')));",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "01",
+                          "value": "if(count(query)==0)exit;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "02",
+                          "value": "int desired=(0+CustomInterfaceText('PageIndex'))*8+row;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "03",
+                          "value": "int seen=0;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "04",
+                          "value": "dword chosen=0;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "05",
+                          "value": "int length=count(query);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "06",
+                          "value": "for(int i=0;i<GalaxyStars();i=i+1)",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "07",
+                          "value": "{",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "08",
+                          "value": "dword star=GalaxyStar(i);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "09",
+                          "value": "if(!star)continue;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "10",
+                          "value": "if(substr(lowercase(StarName(star)),0,length)!=query)continue;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "11",
+                          "value": "if(seen==desired){chosen=star;break;}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "12",
+                          "value": "seen=seen+1;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "13",
+                          "value": "}",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "14",
+                          "value": "if(!chosen)exit;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "15",
+                          "value": "ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Place'),'star',chosen);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "16",
+                          "value": "CloseCustomForm();",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Place",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "00",
+                          "value": "if(!star)exit;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "01",
+                          "value": "float x=CoordX(star)*100;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "02",
+                          "value": "x=x/150;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "03",
+                          "value": "x=x*768;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "04",
+                          "value": "x=x/100;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "05",
+                          "value": "float y=CoordY(star)*527;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "06",
+                          "value": "y=y/100;",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "07",
+                          "value": "InterfacePos('Galaxy','FHDGalaxySearchMark',-25+x+CoordX(star)/5,-25+y,0);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "08",
+                          "value": "InterfaceState('Galaxy','FHDGalaxySearchMark',1);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "ClearMark",
+                    "block": {
+                      "sorted": true,
+                      "entries": [
+                        {
+                          "name": "00",
+                          "value": "InterfaceState('Galaxy','FHDGalaxySearchMark',-1);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        },
+                        {
+                          "name": "01",
+                          "value": "InterfacePos('Galaxy','FHDGalaxySearchMark',0,0,0);",
+                          "metadata": [
+                            0,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "metadata": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "metadata": [
+          0,
+          1
+        ]
+      }
+    ]
+  }
+}

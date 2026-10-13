@@ -1,0 +1,96 @@
+{
+  "format": "cache",
+  "header_key": 3935256375,
+  "new_format": false,
+  "seed": 1369621460,
+  "sha256": "7bc0a8a1c290e5c52ed24ee7fa7e07069f32b42b59cb151761ff27d4f738bf5a",
+  "tree": {
+    "sorted": true,
+    "entries": [
+      {
+        "name": "Bm",
+        "block": {
+          "sorted": true,
+          "entries": [
+            {
+              "name": "FHDGalaxySearch",
+              "block": {
+                "sorted": true,
+                "entries": [
+                  {
+                    "name": "ClearA",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\DelA.gi"
+                  },
+                  {
+                    "name": "ClearD",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\DelD.gi"
+                  },
+                  {
+                    "name": "ClearInputA",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\ClearInputA.gi"
+                  },
+                  {
+                    "name": "ClearInputD",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\ClearInputD.gi"
+                  },
+                  {
+                    "name": "ClearInputN",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\ClearInputN.gi"
+                  },
+                  {
+                    "name": "ClearN",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\DelN.gi"
+                  },
+                  {
+                    "name": "GNPoQ",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\GNPoQ.gai"
+                  },
+                  {
+                    "name": "MapClearA",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\MapClearA.gi"
+                  },
+                  {
+                    "name": "MapClearD",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\MapClearD.gi"
+                  },
+                  {
+                    "name": "MapClearN",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\MapClearN.gi"
+                  },
+                  {
+                    "name": "MapSearchA",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\MapSearchA.gi"
+                  },
+                  {
+                    "name": "MapSearchD",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\MapSearchD.gi"
+                  },
+                  {
+                    "name": "MapSearchN",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\MapSearchN.gi"
+                  },
+                  {
+                    "name": "Rama",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\Rama.gi"
+                  },
+                  {
+                    "name": "SearchA",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\2TipsA.gi"
+                  },
+                  {
+                    "name": "SearchD",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\2TipsD.gi"
+                  },
+                  {
+                    "name": "SearchN",
+                    "value": "Mods\\FHD_MODS\\FHD_GalaxySearch\\Data\\Image\\2TipsN.gi"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

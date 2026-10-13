@@ -1,0 +1,448 @@
+ML ^{
+    FHDGalaxySearchWindow ^{
+        Border=0,0,1024,768
+        CodeBeforeRun ^{
+            00=int w=GetGameOptions('ResolutionX');
+            01=int h=GetGameOptions('ResolutionY');
+            02=CustomInterfaceSize('MainPanel',w,h);
+            03=CustomInterfaceSize('BGBuf',w,h);
+            04=CustomInterfacePos('FrameWindow',(w-721)/2,(h-669)/2);
+            05=CustomInterfaceSize('FrameWindow',721,669);
+            06=CustomInterfacePos('Window',(w-660)/2,(h-590)/2);
+            07=CustomInterfaceText('SearchQuery','');
+            08=CustomInterfaceText('LastQuery','');
+            09=CustomInterfaceText('PageIndex','0');
+            10=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix','','hasExpectedPrefix',0);
+            11=SetFocus('','SearchQuery');
+        }
+        Panel ^{
+            GraphBuf ^{
+                Name=BGBuf
+                Pos=0,0,9
+                Size=1024,768
+            }
+            Name=MainPanel
+            OnKey ^{
+                00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.RefreshOnKey'),'pressedKey',KEY,'keyModifiers',KEYMOD);
+            }
+            Panel ^{
+                Image ^{
+                    Image=GI,Bm.FHDGalaxySearch.Rama
+                    Name=FrameRama
+                    Pos=0,0,0
+                    Size=721,669
+                }
+                Name=FrameWindow
+                Pos=0,0,0
+                Size=721,669
+            }
+            Panel ^{
+                Edit ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    MaxLen=40
+                    Name=SearchQuery
+                    Pos=124,70,-2
+                    ReturnFocusLeave=False
+                    Size=338,30
+                    TextColor=230,240,245
+                }
+                Frame ^{
+                    Color=70,130,150
+                    ColorFill=15,26,38
+                    Fill=True
+                    Kind=Rect
+                    Name=Backdrop
+                    Pos=0,0,3
+                    Size=660,590
+                }
+                GraphButton ~{
+                    Name=ClearQuery
+                    ImageNormal=GI,Bm.FHDGalaxySearch.ClearInputN
+                    ImageNormalA=GI,Bm.FHDGalaxySearch.ClearInputA
+                    ImageDown=GI,Bm.FHDGalaxySearch.ClearInputD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=488,70,-2
+                    Size=150,40
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=CustomInterfaceText('SearchQuery','');
+                        01=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Refresh'),'expectedPrefix','','hasExpectedPrefix',0);
+                        02=SetFocus('','SearchQuery');
+                    }
+                }
+                GraphButton ~{
+                    Name=Pick0
+                    Active=False
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=573,141,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',0);
+                    }
+                }
+                GraphButton ~{
+                    Name=Pick1
+                    Active=False
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=573,187,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',1);
+                    }
+                }
+                GraphButton ~{
+                    Name=Pick2
+                    Active=False
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=573,233,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',2);
+                    }
+                }
+                GraphButton ~{
+                    Name=Pick3
+                    Active=False
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=573,279,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',3);
+                    }
+                }
+                GraphButton ~{
+                    Name=Pick4
+                    Active=False
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=573,325,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',4);
+                    }
+                }
+                GraphButton ~{
+                    Name=Pick5
+                    Active=False
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=573,371,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',5);
+                    }
+                }
+                GraphButton ~{
+                    Name=Pick6
+                    Active=False
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=573,417,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',6);
+                    }
+                }
+                GraphButton ~{
+                    Name=Pick7
+                    Active=False
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=573,463,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Select'),'row',7);
+                    }
+                }
+                GraphButton ~{
+                    Name=Prev
+                    ImageNormal=GI,Bm.FormShip2.2HoldLeftN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldLeftA
+                    ImageDown=GI,Bm.FormShip2.2HoldLeftD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=285,517,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Page'),'delta',-1);
+                    }
+                }
+                GraphButton ~{
+                    Name=Next
+                    ImageNormal=GI,Bm.FormShip2.2HoldRightN
+                    ImageNormalA=GI,Bm.FormShip2.2HoldRightA
+                    ImageDown=GI,Bm.FormShip2.2HoldRightD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=318,517,-2
+                    Size=22,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.Page'),'delta',1);
+                    }
+                }
+                GraphButton ~{
+                    Name=Close
+                    ImageNormal=GI,Bm.FormCount2.2CloseN
+                    ImageNormalA=GI,Bm.FormCount2.2CloseA
+                    ImageDown=GI,Bm.FormCount2.2CloseD
+                    Kind=Normal
+                    KindHit=Rect
+                    Pos=575,520,-2
+                    Size=36,37
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=CloseCustomForm();
+                    }
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Ranger
+                    Name=Title
+                    Pos=24,10,-2
+                    Size=610,40
+                    Text=ПОИСК ЗВЁЗДНЫХ СИСТЕМ
+                    TextColor=230,240,245
+                }
+                Label ^{
+                    Font=Font.2SmallBold
+                    Name=SearchCaption
+                    Pos=24,73,-2
+                    Size=95,25
+                    Text=Название:
+                    TextColor=230,240,245
+                }
+                Label ^{
+                    Font=Font.2Small
+                    Name=ClearQueryText
+                    Pos=508,113,-2
+                    Size=130,22
+                    Text=Стереть ввод
+                    TextColor=180,200,230
+                }
+                Label ^{
+                    Font=Font.2SmallBold
+                    Name=ResultCount
+                    Pos=25,111,-2
+                    Size=475,24
+                    Text=Начните вводить название системы
+                    TextColor=220,240,255
+                }
+                Label ^{
+                    Active=False
+                    Name=LastQuery
+                    Pos=-100,-100,-2
+                    Size=1,1
+                    Text=
+                }
+                Label ^{
+                    Active=False
+                    Name=PageIndex
+                    Pos=-100,-100,-2
+                    Size=1,1
+                    Text=0
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Normal
+                    Name=Result0
+                    Pos=30,141,-2
+                    Size=520,35
+                    Text=
+                    TextColor=226,239,252
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Normal
+                    Name=Result1
+                    Pos=30,187,-2
+                    Size=520,35
+                    Text=
+                    TextColor=226,239,252
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Normal
+                    Name=Result2
+                    Pos=30,233,-2
+                    Size=520,35
+                    Text=
+                    TextColor=226,239,252
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Normal
+                    Name=Result3
+                    Pos=30,279,-2
+                    Size=520,35
+                    Text=
+                    TextColor=226,239,252
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Normal
+                    Name=Result4
+                    Pos=30,325,-2
+                    Size=520,35
+                    Text=
+                    TextColor=226,239,252
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Normal
+                    Name=Result5
+                    Pos=30,371,-2
+                    Size=520,35
+                    Text=
+                    TextColor=226,239,252
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Normal
+                    Name=Result6
+                    Pos=30,417,-2
+                    Size=520,35
+                    Text=
+                    TextColor=226,239,252
+                }
+                Label ^{
+                    AlignX=Left
+                    AlignY=CenterEx
+                    Font=Font.2Normal
+                    Name=Result7
+                    Pos=30,463,-2
+                    Size=520,35
+                    Text=
+                    TextColor=226,239,252
+                }
+                Label ^{
+                    Font=Font.2SmallBold
+                    Name=PageInfo
+                    Pos=30,516,-2
+                    Size=260,35
+                    Text=
+                    TextColor=220,240,255
+                }
+                Name=Window
+                Pos=0,0,0
+                Size=660,590
+            }
+            Pos=0,0,0
+            Size=1024,768
+        }
+    }
+    Galaxy ^{
+        Panel ^{
+            Panel ^{
+            }
+            Panel ^{
+                GraphButton ^{
+                }
+                GraphButton ^{
+                }
+                GraphButton ^{
+                }
+                GraphButton ^{
+                }
+                GraphButton ^{
+                }
+                GraphButton ^{
+                }
+                GraphButton ~{
+                    Name=FHDGalaxySearchOpen
+                    Help=Help.FHDGalaxySearchOpen
+                    ImageNormal=GI,Bm.FHDGalaxySearch.MapSearchN
+                    ImageNormalA=GI,Bm.FHDGalaxySearch.MapSearchA
+                    ImageDown=GI,Bm.FHDGalaxySearch.MapSearchD
+                    Kind=Normal
+                    KindHit=Rect
+                    MouseBlocking=True
+                    Pos=466,577,-10
+                    Size=23,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=OpenCustomForm('FHDGalaxySearchWindow');
+                    }
+                }
+                GraphButton ~{
+                    Name=FHDGalaxySearchClearMap
+                    ImageNormal=GI,Bm.FHDGalaxySearch.MapClearN
+                    ImageNormalA=GI,Bm.FHDGalaxySearch.MapClearA
+                    ImageDown=GI,Bm.FHDGalaxySearch.MapClearD
+                    Kind=Normal
+                    KindHit=Rect
+                    MouseBlocking=True
+                    Pos=491,577,-10
+                    Size=23,35
+                    Style=Style.GB.SoundNormal
+                    OnPressCode ^{
+                        00=if(InterfaceState('Galaxy','FHDGalaxySearchMark')==1)
+                        01={
+                        02=if(MessageBoxYesNo('Удалить метку с карты?'))ExecuteCodeFromString(GenerateCodeStringFromBlock('Script.FHDGalaxySearch.ClearMark'));
+                        03=}
+                    }
+                }
+                Panel ^{
+                    FHDGalaxySearchOverlay ^{
+                        Image ^{
+                            Active=False
+                            Image=GAI,Bm.FHDGalaxySearch.GNPoQ
+                            MouseBlocking=False
+                            MouseBlockingTest=False
+                            Name=FHDGalaxySearchMark
+                            Pos=0,0,-10
+                            Size=50,50
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
